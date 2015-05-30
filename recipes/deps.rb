@@ -16,6 +16,8 @@ execute 'apt-get-update' do
 end.run_action(:run)
 
 include_recipe 'apt'
+
+node.default['build-essential']['compile_time'] = true
 include_recipe 'build-essential'
 
 package node['razor']['libarchive']

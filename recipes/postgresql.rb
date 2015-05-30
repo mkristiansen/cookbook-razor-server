@@ -5,7 +5,7 @@
 
 include_recipe 'postgresql::server'
 
-include_recipe 'database'
+#include_recipe 'database'
 include_recipe 'database::postgresql'
 
 postgresql_connection_info = {

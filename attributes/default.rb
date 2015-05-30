@@ -49,9 +49,11 @@ normal['dhcp']['use_bags'] = false
 default['razor']['dhcp']['subnet']  = '192.168.10.0'
 default['razor']['dhcp']['netmask'] = '255.255.255.0'
 default['razor']['dhcp']['broadcast'] = '192.168.10.255'
-default['razor']['dhcp']['range']   = '192.168.10.200 192.168.10.250'
-default['razor']['dhcp']['options'] = [ 'next-server 192.168.10.2' ]
+default['razor']['dhcp']['range']   = ['192.168.10.200 192.168.10.250']
+#default['razor']['dhcp']['options'] = [ 'next-server 192.168.10.2' ]
 default['razor']['dhcp']['evals'] = [%Q{
+  next-server 192.168.10.2;
+
   if exists user-class and option user-class = "iPXE" {
     filename "bootstrap.ipxe";
   } else {
