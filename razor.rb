@@ -1,3 +1,3 @@
 {
-  "run_list": [ "recipe[razor::default]" ]
+  "run_list": [ "recipe[razor_server::default]" ]
 }
