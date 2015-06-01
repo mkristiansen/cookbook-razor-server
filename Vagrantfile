@@ -7,8 +7,8 @@ Vagrant.configure("2") do |config|
   
   config.vm.define "razor" do |c|
     c.vm.hostname = "razor"
-    c.vm.box = "opscode_ubuntu-12.04"
-    c.vm.box_url = "http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_ubuntu-12.04_chef-provisionerless.box"
+    c.vm.box = "parallels/ubuntu-12.04"
+    c.vm.box_url = ""
   
     c.omnibus.chef_version = :latest
     c.vm.network :private_network, ip: "192.168.10.2"
