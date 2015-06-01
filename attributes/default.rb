@@ -5,7 +5,7 @@
 
 # TODO: Need to alert mailing list before default shift to package based install
 # By default, install the PuppetLabs repo and pkgs
-default['razor']['source'] = true
+default['razor']['source'] = false
 
 # When DNS is available / already registered
 default['razor']['name'] = node['fqdn']
